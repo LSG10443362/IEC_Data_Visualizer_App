@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../iec_data_visualizer_app.iml" filepath="$PROJECT_DIR$/../iec_data_visualizer_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../IEC Data Visualizer App.iml" filepath="$PROJECT_DIR$/../IEC Data Visualizer App.iml" />
     </modules>
   </component>
 </project>
