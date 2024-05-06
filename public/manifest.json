@@ -6,6 +6,11 @@
       "src": "favicon-32x32.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
