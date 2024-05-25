@@ -1,6 +1,6 @@
 # IEC Data Visualizer Web App
 
-This project is a web application designed to visualize IEC (International Electrotechnical Commission) data. It's built using JavaScript, React, and TypeScript, and managed with npm.
+This project is a web application designed to visualize IEC (Independent Electoral Commission) data. It's built using JavaScript, React, and TypeScript, and managed with npm.
 
 ## Features
 
@@ -17,4 +17,4 @@ If you have any questions, issues, or suggestions, please open an issue in this 
 ## Acknowledgments
 
 - Thanks to all contributors who have helped with this project
-- Special thanks to the open source community for the tools and libraries used in this project
+- Special thanks to the open source community for the tools and libraries used in this projec
