@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.navbar {
+    width: 100%;
+    background-color: #2b2b2b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-menu-item {
+    margin: 0 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-menu-item:hover {
+    color: green;
+}
+
+.navbar-menu-item::after {
+    content: ' ⮋';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #2b2b2b; /* Same color as navbar */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    font-size: 1em; /* Same font size as navbar */
+    color: white; /* Same font color as navbar */
+}
+
+.dropdown-menu-item {
+    color: green;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu-item:hover {
+    background-color: lightgray;
+}
+
+.dropdown-menu.open {
+    display: block;
+}
+.dropdown-menu-item-description {
+    color: lightgray; /* Lighter color for description */
+    font-size: 0.8em; /* Smaller font size for description */
+}
+.navbar-logo {
+    font-size: 2em; /* Adjust this value to make the logo bigger */
+    font-weight: bold; /* Make the logo bold */
+}
