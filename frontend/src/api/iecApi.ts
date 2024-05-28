@@ -18,7 +18,7 @@ async function getAccessToken(): Promise<string> {
     const accessToken = response.data.access_token;
     return accessToken;
 
-};
+}
 
 async function fetchData(endpoint: string, token: string) {
     const response = await axios.get(`${API_BASE_URL}/${endpoint}`, {

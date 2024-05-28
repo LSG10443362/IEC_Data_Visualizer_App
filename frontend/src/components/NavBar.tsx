@@ -1,9 +1,13 @@
 // NavBar.tsx
 import * as React from 'react'
-import { useState } from 'react';
+import {useContext, useState} from 'react';
 import './NavBar.css';
+import { ThemeContext } from './ThemeContext';
 
 const NavBar: React.FC = () => {
+
+    const { toggleTheme } = useContext(ThemeContext);
+
     const [openMenu, setOpenMenu] = useState('');
 
     const DropdownMenu = ({ isOpen, children }) => (
@@ -20,12 +24,16 @@ const NavBar: React.FC = () => {
                     <div className="navbar-menu-item" onClick={() => setOpenMenu(openMenu === 'about' ? '' : 'about')}>
                         About
                         <DropdownMenu isOpen={openMenu === 'about'}>
-                            <div className="dropdown-menu-item">About 1
-                                <div className="dropdown-menu-item-description">Description for About 1</div>
+                            <div className="dropdown-menu-item"> OUR STORY
+                                <div className="dropdown-menu-item-description">Description for Our Story</div>
                             </div>
-                            <div className="dropdown-menu-item">About 2
-                                <div className="dropdown-menu-item-description">Description for About 2</div>
+                            <div className="dropdown-menu-item">DISCOVER THE TEAM
+                                <div className="dropdown-menu-item-description">Description for Discover the team</div>
                             </div>
+                            <div className="dropdown-menu-item">CONTACT US
+                                <div className="dropdown-menu-item-description">Description for Contact Us</div>
+                            </div>
+
                         </DropdownMenu>
                     </div>
                     <div className="navbar-menu-item" onClick={() => setOpenMenu(openMenu === 'news' ? '' : 'news')}>
@@ -39,23 +47,25 @@ const NavBar: React.FC = () => {
                             </div>
                         </DropdownMenu>
                     </div>
-                    <div className="navbar-menu-item" onClick={() => setOpenMenu(openMenu === 'support' ? '' : 'support')}>
+                    <div className="navbar-menu-item"
+                         onClick={() => setOpenMenu(openMenu === 'support' ? '' : 'support')}>
                         Support
                         <DropdownMenu isOpen={openMenu === 'support'}>
-                            <div className="dropdown-menu-item"> OUR STORY
-                                <div className="dropdown-menu-item-description">Description for Our Story</div>
+                            <div className="dropdown-menu-item">Documentation
+                                <div className="dropdown-menu-item-description">Description for About 1</div>
                             </div>
-                            <div className="dropdown-menu-item">DISCOVER THE TEAM
-                                <div className="dropdown-menu-item-description">Description for Discover the team</div>
+                            <div className="dropdown-menu-item">Funding?
+                                <div className="dropdown-menu-item-description">Description for About 2</div>
                             </div>
-                            <div className="dropdown-menu-item">CONTACT US
-                                <div className="dropdown-menu-item-description">Description for Contact Us</div>
-                            </div>
+                            )
+
                         </DropdownMenu>
                     </div>
+                    <button onClick={toggleTheme}>Toggle Theme</button>+
                 </div>
             </div>
         </div>
+
     );
 };
 
